@@ -1,0 +1,10 @@
+type Game {
+  _id: Int
+  name: String
+  summary: String
+  releaseDate: String
+}
+type Query {
+  games: [Game]
+  game(name: String): [Game]
+}
