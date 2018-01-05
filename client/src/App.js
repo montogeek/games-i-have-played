@@ -30,11 +30,15 @@ class App extends Component {
   }
 
   render() {
-    return [
-      <Search onChange={this.onChange} />,
-      <SearchResultsList name={this.state.name} onGameSelected={this.addGame} />,
-      <GamesList games={this.state.games} />
-    ]
+    return (
+      <div className="ma3 calisto">
+        <Search onChange={this.onChange} />
+        <div className="flex flex-row">
+          <SearchResultsList name={this.state.name} onGameSelected={this.addGame} />
+          <GamesList games={this.state.games} />
+        </div>
+      </div>
+    )
   }
 }
 

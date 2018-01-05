@@ -6,7 +6,7 @@ import GameCard from './GameCard'
 const SearchResultItem = ({ game, onClick }) => {
   return [
     <GameCard game={game} />,
-    <button onClick={onClick.bind(this, game)}>Select</button>
+    <button className="f6 link dim br1 ba ph3 pv2 mb2 dib dark-gray" onClick={onClick.bind(this, game)}>Select</button>
   ]
 }
 
@@ -47,11 +47,13 @@ class SearchResultsList extends Component {
             return <div>Loading...</div>
           }
           return (
-            <div>
-              <h3>Games</h3>
-              {props.game.map(game => (
-                <SearchResultItem onClick={this.selectGame} game={game} />
-              ))}
+            <div className="flex-auto flex-basis-50 pr5">
+              <h2 className="f2">Available games</h2>
+              <ul className="list pl0">
+                {props.game.map(game => (
+                  <SearchResultItem onClick={this.selectGame} game={game} />
+                ))}
+              </ul>
             </div>
           )
         }}

@@ -1,22 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import { Provider } from 'react-fela'
-import { createRenderer } from 'fela'
 import App from './src/App'
+import './src/styles.css'
 
 const render = Component => {
   ReactDOM.render(
     <AppContainer>
-      <Provider renderer={renderer}>
-        <Component />
-      </Provider>
+      <Component />
     </AppContainer>,
     document.getElementById('root')
   )
 }
-
-const renderer = createRenderer()
 
 render(App)
 

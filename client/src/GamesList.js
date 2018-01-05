@@ -8,9 +8,9 @@ class GamesList extends Component {
     if (games.length === 0) return null
 
     return (
-      <div>
-        <h3>My games!</h3>
-        {games.map(game => <GameCard game={game} />)}
+      <div className="flex-auto flex-basis-50">
+        <h2 className="f2">Game collection</h2>
+        <ul className="list pl0">{games.map(game => <GameCard game={game} />)}</ul>
       </div>
     )
   }

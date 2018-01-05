@@ -17,6 +17,13 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.css$/,
+        use:[
+          { loader: "style-loader" },
+          { loader: "css-loader" }
+        ]
       }
     ]
   },
@@ -26,7 +33,7 @@ module.exports = {
     hot: true,
     historyApiFallback: true,
     proxy: {
-      "/graphql": "http://localhost:4000"
+      '/graphql': 'http://localhost:4000'
     }
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]
