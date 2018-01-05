@@ -1,0 +1,9 @@
+@import "~tachyons";
+
+.black-60 {
+  color: rgba(0, 0, 0, .6);
+}
+
+.flex-basis-50 {
+  flex-basis: 50%;
+}

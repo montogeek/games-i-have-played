@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
-import { installRelayDevTools } from 'relay-devtools'
 import Search from './Search'
 import SearchResultsList from './SearchResultsList'
 import GamesList from './GamesList'
-
-installRelayDevTools()
 
 class App extends Component {
   constructor(props) {
